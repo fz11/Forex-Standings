@@ -39,8 +39,3 @@ def pairinfo():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     return render_template("search.html", Forex_list=Forex_list)
-
-# Test page for select drop down menu for redirect to pairinfo()
-@app.route("/selectdirect", methods=["GET", "POST"])
-def selectdirect():
-    return render_template("selectredirect.html", Forex_list=Forex_list)
