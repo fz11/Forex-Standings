@@ -1,0 +1,32 @@
+{% extends "layout2.html" %}
+{%  block content %}
+    <div class="container"></div>
+        <table id="forex-table" class="table-dark mt-4" style="width:100%" border="1">
+            <thead>
+                <tr>
+                    <th scope = "col">Pair Name</th>
+                    <th scope = "col">Ask Price</th>
+                    <th scope = "col">Bid Price</th>
+                    <th scope = "col">High Price</th>
+                    <th scope = "col">Low Price</th>
+                    <th scope = "col">Percent Change</th>
+                    <th scope = "col">High/Low Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dict_element in Forex_list %}
+                    <tr style="color:black">
+                    {% for key, value in dict_element.items() %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    <script type="text/javascript">
+    $(document).ready( function() {
+      $('#forex-table').DataTable();
+    });
+  </script>
+{% endblock %}

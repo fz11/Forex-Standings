@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+    		<div class="main-body-alignment">
+			<div class="main-body-text" >
+				<h2><span class="main-primary-text">Search for popular Forex pairs using the dropdown menu</span></h2>
+				<h4><span class="main-secondary-text">Select a following pair</span></h4>
+			</div>
+			<div class="container-md">
+				<div class="row justify-content-md-center">
+					<div class="col-mg-1">
+                      <form action={{ url_for("pairinfo") }} method="POST">
+						<select name="Pairs" class="form-select form-select-lg my-1 mr-sm-2" aria-label="Select Forex Pair">
+ 							<option selected>Pair Name</option>
+  							<!-- <option value="1">United States Dollar / Japanese Yen (USD/JPY)</option> -->
+                            {% for index in Forex_list %}
+                                <option value="{{ index }}"><a href="{{ url_for("pairinfo", row_info = Forex_list[index]) }}">{{ index.get("Pair Name") }}</a></option>
+                            {% endfor %}
+						</select>
+                          <input type="submit" value="Search">
+                      </form>
+					</div>
+				</div>
+                <div class="sub-text-translate sub-text-animate">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-6 centered">
+                            <h5 class="table-text"> Or use our table by clicking on "Table Search" below </h5>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-sm-1 centered">
+                            <form action={{ url_for("search") }} method="post" >
+                                <button type="submit" class="btn btn-info">Table Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+            </div>
+{% endblock content %}

@@ -1,0 +1,135 @@
+.footer-format {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(207, 78, 11, 0.5);
+   color: black;
+   text-align: center;
+	font-size:medium;
+}
+
+.main-body-alignment{
+	position: relative;
+	transform: translate(0px, 160px);
+}
+
+.main-body-text{
+	text-align: center;
+	letter-spacing: 4px;
+	font-family: Verdana, "sans serif";
+	text-transform: uppercase;
+	font-weight: bold;
+  	-webkit-text-stroke: 1px black;
+
+	text-shadow:
+       3px 3px 0 #000,
+       -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+.navbar-border-and-color{
+	background-color:rgba(80,131,190,0.9);
+	border-bottom-style: groove;
+	border-width: 3px;
+}
+
+.main-primary-text{
+	letter-spacing:4px;
+	color: white;
+	font-size: xxx-large;
+	font-weight: 300;
+	margin-bottom: 10px;
+	animation: main-text 2s 1;
+}
+
+.main-secondary-text{
+	color: white;
+	animation: second-text 4s 1;
+	animation-direction: alternate;
+}
+
+.table-text{
+	color:white;
+	letter-spacing:2px;
+	text-align: center;
+	-webkit-text-stroke: 1px black;
+	text-transform: uppercase;
+	font-weight: bold;
+
+	text-shadow:
+	3px 3px 0 #000,
+	-1px -1px 0 #000,
+	1px -1px 0 #000,
+	-1px 1px 0 #000,
+	1px 1px 0 #000;
+}
+
+.sub-text-translate{
+	transform: translate(0, 20px);
+}
+
+.sub-text-animate{
+	animation: subtext 5s 1;
+	animation-timing-function: ease-out;
+}
+
+#rectangle-nav-logo{
+	width: 20px;
+	height:10px;
+	background: white
+}
+
+#background-home{
+  min-height:100%;
+  background:url(https://i0.wp.com/stormandsky.com/gif/14.gif) rgba(20, 0, 100, 0.3);
+  background-size:cover;
+  background-blend-mode: multiply;
+}
+
+#font-nav-lead{
+	font-family: Garamond, serif;
+	letter-spacing: 8px;
+	font-size: x-large;
+}
+
+#push-down-content{
+		transform: translate(0px, 10px);
+}
+
+@keyframes main-text {
+	0% {
+		opacity: 0%;
+		letter-spacing: 9px;
+		margin-bottom: -40px;
+	}
+	75% {
+		opacity: 100%;
+		letter-spacing: 4px;
+		margin-bottom: -40px;
+	}
+}
+
+
+@keyframes second-text {
+	0% {
+		opacity:0%;
+
+	}
+	50% {
+		opacity:0%;
+
+	}
+
+	100% {
+		opacity:100%;
+	}
+}
+
+@keyframes subtext {
+	0%{transform: translate(1300px, 0)}
+	80%{transform: translate(1300px,0)}
+	100%{transform: translate(0,0)}
+}

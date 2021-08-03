@@ -1,0 +1,9 @@
+{% extends "layout2.html" %}
+    {% block content %}
+            {% for dict_item in Forex_list %}
+                {% for key, value in dict_item.items() %}
+                    <h1>{{key}} - {{ value }}</h1>
+                {% endfor %}
+                    <br>
+            {% endfor %}
+    {% endblock %}

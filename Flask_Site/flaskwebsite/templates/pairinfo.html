@@ -1,0 +1,34 @@
+{% extends "layout2.html" %}
+{%  block content %}
+    <div class="container"></div>
+        <table id="forex-table" class="table-dark mt-5" style="width:100%" border="1">
+            <thead>
+                <tr>
+                    <th scope = "col">Pair Name</th>
+                    <th scope = "col">Ask Price</th>
+                    <th scope = "col">Bid Price</th>
+                    <th scope = "col">High Price</th>
+                    <th scope = "col">Low Price</th>
+                    <th scope = "col">Percent Change</th>
+                    <th scope = "col">High/Low Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="color:black">
+                    <td>{{ d_select.get("Pair Name") }}</td>
+                    <td>{{ d_select.get("Ask Price") }}</td>
+                    <td>{{ d_select.get("Bid Price") }}</td>
+                    <td>{{ d_select.get("High Price") }}</td>
+                    <td>{{ d_select.get("Low Price") }}</td>
+                    <td>{{ d_select.get("Percent Change") }}</td>
+                    <td>{{ d_select.get("High/Low Average") }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <script type="text/javascript">
+    $(document).ready( function() {
+      $('#forex-table').DataTable();
+    });
+  </script>
+{% endblock %}

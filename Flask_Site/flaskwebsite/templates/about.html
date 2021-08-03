@@ -1,0 +1,35 @@
+{% extends "layout2.html" %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid" id="push-down-content">
+        <div class="container">
+            <h2 class="display-4">About This Website</h2>
+            <hr>
+            <p>This website provides information regarding prices about popular foreign exchange
+            pairs. In the world of foreign exchange, or forex, the market of exchanging currency is
+            one of the biggest in the world. As many people make decisions in exchanging certain
+            forex pairs, it is important to view the prices, known as the ask and bid prices, of the pairs that the person wants to
+            exchange. </p>
+            <p>Any person using this website can use the tool located in the home page to view
+            the information of popular forex pairs. This will redirect the user to a new page that will
+            generate a table that shows information of the selected pair with the following:
+            </p>
+            <u1 style="list-style-position: inside">
+                <li>Pair Name</li>
+                <li>Ask Price</li>
+                <li>Bid Price</li>
+                <li>High Price (Daily High)</li>
+                <li>Low Price (Daily Low)</li>
+                <li>Percent Change (From previous high)</li>
+                <li>High/Low Average (Average taken from high and low prices)</li>
+           </u1>
+            <br>
+            <p>This Project uses Flask, a micro-web framework used for the development of this website
+            using Python for creating the scripts used for flask to run the website, HTML/CSS to create
+                the layout and appearance of the website and the python modules "beatifulsoup4" and "requests"
+            to scrape the forex information from another website's HTML page via investing.com. </p>
+            <p>Forex information provided by: <a href="https://www.investing.com/currencies/streaming-forex-rates-majors">www.investing.com/currencies/streaming-forex-rates-majors</a> </p>
+            <p>Check out my github below for the code.</p>
+            <a href="https://www.github.com/fz11">github.com/fz11</a>
+        </div>
+    </div>
+{% endblock %}
